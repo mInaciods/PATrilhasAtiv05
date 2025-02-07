@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.Write("Escreva um número: ");
+        string num1 = Console.ReadLine();
+
+        int i;
+        bool conversaoBemSucedida = int.TryParse(num1, out i);
+
+        string resultado = conversaoBemSucedida ? $"Conversão sucedida: {i}" : "Conversão não sucedida.";
+
+        Console.WriteLine(resultado);
+    }
+}

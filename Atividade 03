@@ -1,0 +1,11 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        int[] array = new int[0];
+
+        Console.WriteLine(array == null || array.Length == 0 ? "O array está vazio." : "O array não está vazio.");
+    }
+}

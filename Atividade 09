@@ -1,14 +1,52 @@
 using System;
-
 class Program
 {
-    public static void Main(string[] args)
-    {
-        Console.Write("Escreva dois números: ");
-        int num1 = int.Parse(Console.ReadLine());
-        int num2 = int.Parse(Console.ReadLine());
+    static void Main()
+    {
+    int i = 0;
+    while(i == 0){
+        Console.WriteLine("\nBem vindo ao menu dos dias da semana!");
+        Console.WriteLine("Escreva um número de 1 a 7:");
 
-        Console.WriteLine(num1 % num2 == 0 ? "È divisível." : "Não é divisivel.");
+        
+        int menu = int.Parse(Console.ReadLine());
+        switch(menu)
+        {
+        case 1 :
+            Console.Clear();
+            Console.WriteLine("É domingo.");
+            break;
 
-    }
+        case 2 :
+            Console.Clear();
+            Console.WriteLine("É segunda.");
+        break;
+
+        case 3 : 
+            Console.Clear();
+            Console.WriteLine("É terça.");
+        break;
+        case 4 : 
+            Console.Clear();
+            Console.WriteLine("É quarta.");
+        break;
+        case 5 : 
+            Console.Clear();
+            Console.WriteLine("É quinta.");
+        break;
+        case 6 : 
+            Console.Clear();
+            Console.WriteLine("É sexta.");
+        break;
+        case 7 : 
+            Console.Clear();
+            Console.WriteLine("É sábado.");
+        break;
+        default: 
+            Console.Clear();
+            Console.WriteLine("Escreva um valor válido.");
+            break;
+        }
+        }
+    }
 }

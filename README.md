@@ -43,4 +43,4 @@ nascimento.
 
 21) Crie um programa que solicite ao usuário para inserir números inteiros até  que um número negativo seja inserido. Em seguida, exiba a soma dos números inseridos (excluindo o número negativo).
 
-v) Crie um programa que solicite ao usuário para inserir um número inteiro  positivo e, em seguida, exiba todos os números pares entre 0 e o número inserido.
+22) Crie um programa que solicite ao usuário para inserir um número inteiro  positivo e, em seguida, exiba todos os números pares entre 0 e o número inserido.

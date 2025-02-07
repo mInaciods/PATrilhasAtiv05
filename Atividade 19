@@ -1,0 +1,17 @@
+using System;
+  class Program
+  {
+      static void Main()
+      {
+        int i = 1;
+        int resultado = 0;
+          
+        do {   
+          Console.Write("\nEscreva um número: ");
+          int numero = int.Parse(Console.ReadLine());
+          resultado = numero + resultado;
+          Console.WriteLine("\n\nA soma dos números é: {0}", resultado);
+          i++;
+        } while (i < 5);
+      }
+  }

@@ -4,8 +4,13 @@ class Program
 {
     public static void Main(string[] args)
     {
-        int[] array = new int[0];
+        Console.WriteLine("Insira sua data de nascimento");
+        DateTime data1 = DateTime.Now;
+        string data = Console.ReadLine();
 
-        Console.WriteLine(array == null || array.Length == 0 ? "O array está vazio." : "O array não está vazio.");
+        TimeSpan diferença = data1 - DateTime.ParseExact(data, "dd/MM/yyyy", null);
+
+        Console.WriteLine("A sua idade é: " +  diferença.Days / 365);
+
     }
 }

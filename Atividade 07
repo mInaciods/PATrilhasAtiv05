@@ -1,14 +1,41 @@
 using System;
-
 class Program
 {
-    public static void Main(string[] args)
-    {
-        Console.Write("Escreva um número: ");
-        float num1 = float.Parse(Console.ReadLine());
+    static void Main()
+    {
+    int i = 0;
+    while(i == 0){
+        Console.WriteLine("\nBem vindo ao menu!");
+        Console.WriteLine("Escolha uma cor:");
 
-        string resultado = num1 > 0 ? "positivo" : (num1 < 0 ? "negativo" : "zero");
+        Console.WriteLine("\n\n1- Vermelho.");
+        Console.WriteLine("\n\n2- Azul.");
+        Console.WriteLine("\n\n3- Verde.");
+        Console.WriteLine("\n\n4- Sair.");
+        
+        int menu = int.Parse(Console.ReadLine());
+        switch(menu)
+        {
+        case 1 :
+            Console.Clear();
+            Console.WriteLine("Você escolheu a cor vermelho.");
+            break;
 
-        Console.WriteLine("O número {0} é {1}.", num1, resultado);
-    }
+        case 2 :
+            Console.Clear();
+            Console.WriteLine("Você escolheu a cor azul.");
+            break;
+
+        case 3 : 
+            Console.Clear();
+            Console.WriteLine("Você escolheu a cor verde.");
+            break;
+        case 4 : 
+            Console.Clear();
+            Console.WriteLine("Você escolheu sair.");
+            i = 1;
+            break;
+        }
+        }
+    }
 }

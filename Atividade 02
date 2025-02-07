@@ -1,15 +1,13 @@
 using System;
-
 class Program
 {
-  public static void Main(string[] args)
-  {
-    Console.Write("Escreva um número: ");
-    int num1 = int.Parse(Console.ReadLine());
-    Console.Write("Escreva outro número: ");
-    int num2 = int.Parse(Console.ReadLine());
+    public static void Main(string[] args)
+    {
+        DateTime data1 = new DateTime(2025, 02, 04);
+        DateTime data2 = new DateTime(2004, 07, 01);
+        TimeSpan diferença = data1 - data2;
 
-    Console.WriteLine(num1 > num2 ? "O Primeiro é maior." : "O segundo é maior.");
+        Console.WriteLine("A diferença entre as duas datas é {0} dias", diferença.Days);
 
-  }
+    }
 }

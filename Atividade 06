@@ -2,13 +2,31 @@ using System;
 
 class Program
 {
-    public static void Main(string[] args)
+    static void Main()
     {
-        Console.Write("Escreva um número: ");
-        float num1 = float.Parse(Console.ReadLine());
+    int i = 0;
+    while(i == 0){
+        Console.WriteLine("Escreva um número:");
+        Console.WriteLine("Para sair, digite SAIR.");
+        int menu = int.Parse(Console.ReadLine());
+        switch(Math.Sign(menu))
+        {
+        case -1 :
+            Console.Clear();
+            Console.WriteLine("Número negativo.");
+            break;
 
-        float valorAbsoluto = Math.Abs(num1);
+        case 0 :
+            Console.Clear();
+            Console.WriteLine("Número é 0.");
+            break;
 
-        Console.WriteLine("O valor absoluto de {0} é: {1}", num1, valorAbsoluto);
+        case 1 :
+            Console.Clear();
+            Console.WriteLine("Número positivo.");
+            break;
+
+        }
+        }
     }
 }

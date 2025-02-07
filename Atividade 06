@@ -1,0 +1,14 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.Write("Escreva um número: ");
+        float num1 = float.Parse(Console.ReadLine());
+
+        float valorAbsoluto = Math.Abs(num1);
+
+        Console.WriteLine("O valor absoluto de {0} é: {1}", num1, valorAbsoluto);
+    }
+}

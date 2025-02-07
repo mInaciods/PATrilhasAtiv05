@@ -1,17 +1,30 @@
 using System;
-
 class Program
 {
-    public static void Main(string[] args)
-    {
-        Console.Write("Escreva um número: ");
-        string num1 = Console.ReadLine();
+    static void Main()
+    {
+    int i = 0;
+    while(i == 0){
+        Console.WriteLine("\nBem vindo ao menu!");
+        Console.WriteLine("Escreva uma letra:");
 
-        int i;
-        bool conversaoBemSucedida = int.TryParse(num1, out i);
-
-        string resultado = conversaoBemSucedida ? $"Conversão sucedida: {i}" : "Conversão não sucedida.";
-
-        Console.WriteLine(resultado);
-    }
+        
+        string menu = (Console.ReadLine());
+        switch(menu.ToLower())
+        {
+        case "a" :
+        case "e" :
+        case "i" : 
+        case "o" : 
+        case "u" : 
+            Console.Clear();
+            Console.WriteLine("Você escreveu uma vogal.");
+            break;
+        default: 
+            Console.Clear();
+            Console.WriteLine("Você escreveu uma consoante.");
+            break;
+        }
+        }
+    }
 }

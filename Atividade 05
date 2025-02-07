@@ -1,0 +1,13 @@
+using System;
+
+class Program
+{
+  public static void Main(string[] args)
+  {
+    Console.Write("Escreva um número: ");
+    int num1 = int.Parse(Console.ReadLine());
+
+    Console.WriteLine(num1 % 2 == 0 && num1 % 3 == 0 && num1 % 5 == 0 ? "O número não é primo." : "O número é primo");
+
+  }
+}

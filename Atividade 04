@@ -1,0 +1,11 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        string texto = "";
+     
+        Console.WriteLine(texto.Length == 0 ? "A string está vazia." : "A string não está vazia.");
+    }
+} 

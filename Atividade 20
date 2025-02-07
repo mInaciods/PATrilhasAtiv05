@@ -1,0 +1,17 @@
+using System;
+  class Program
+  {
+      static void Main()
+      {
+        int i = 0;
+        string pass = "123";
+        string senha ="";
+          
+        do {   
+          Console.Write("\nEscreva a senha: ");
+          senha = Console.ReadLine();
+          i++;
+        } while (i < 3 && senha != pass);
+        Console.WriteLine(senha == pass ? "Você acertou a senha." : "Você não acertou a senha.");
+      }
+  }

@@ -1,11 +1,42 @@
-using System;
+using System;using System.Collections.Generic;
+using System.Globalization; // Importante para usar CultureInfo
 
 class Program
 {
-    public static void Main(string[] args)
-    {
-        string texto = "";
-     
-        Console.WriteLine(texto.Length == 0 ? "A string está vazia." : "A string não está vazia.");
-    }
-} 
+    static void Main()
+    {
+        List<DateTime> feriados = new List<DateTime>
+        {
+            new DateTime (2025, 1, 1), // Ano Novo
+            new DateTime (2025, 3, 3), // Carnaval
+            new DateTime (2025, 3, 4), // Carnaval
+            new DateTime (2025, 4, 18), // Paixão de Cristo
+            new DateTime (2025, 4, 21), // Tiradentes
+            new DateTime (2025, 5, 1), // Dia do Trabalho
+            new DateTime (2025, 6, 19), // Corpus Christi
+            new DateTime (2025, 9, 7), // Independência do Brasil
+            new DateTime (2025, 10, 12), // Nossa Sr.a Aparecida - Padroeira do Brasil
+            new DateTime (2025, 11, 2), // Finados
+            new DateTime (2025, 11, 15), // Proclamação da República
+            new DateTime (2025, 11, 20), // Dia Nacional de Zumbi e da Consciência Negra
+            new DateTime (2025, 12, 25) // Natal
+        };
+
+        Console.Write("Digite uma data (dd/MM/yyyy): ");
+        string input = Console.ReadLine();
+
+        // Definindo a cultura brasileira
+        CultureInfo provider = new CultureInfo("pt-BR");
+
+        // Tenta converter a entrada para DateTime usando o formato exato dd/MM/yyyy
+        if (DateTime.TryParseExact(input, "dd/MM/yyyy", provider, DateTimeStyles.None, out DateTime data))
+        {
+            bool ehFeriado = feriados.Exists(f => f.Month == data.Month && f.Day == data.Day);
+            Console.WriteLine(ehFeriado ? "Essa data é um feriado nacional!" : "Essa data NÃO é um feriado nacional.");
+        }
+        else
+        {
+            Console.WriteLine("Data inválida! Digite no formato correto (dd/MM/yyyy).");
+        }
+    }
+}

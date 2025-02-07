@@ -1,0 +1,15 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Escreva um número: ");
+        int num1 = int.Parse(Console.ReadLine());
+        int num = 0;
+        num1 = (num1 % 2 == 1 ? num1 - 1 : num1);
+        while(num < num1) {
+            num = num + 2;
+            Console.WriteLine("{0}", num);
+        }
+    }
+}
